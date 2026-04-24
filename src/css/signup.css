@@ -2,9 +2,9 @@
 
 .signup-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 480px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 40px 16px;
 }
 
 .signup-title-img {
@@ -118,12 +118,14 @@
     }
 
     .signup-container {
-        max-width: 1280px;
         display: flex;
+        align-items: center;
         gap: 64px;
         padding: 40px 20px;
-        width: 1080px;
+        max-width: 1080px;
+        width: 100%;
         height: 578px;
+        margin: 0 auto;
     }
 
     .signup-content {
@@ -144,8 +146,7 @@
 
 @media screen and (min-width:1440px) {
     .signup-container {
-        max-width: 1440px;
-        width: 1240px;
+        max-width: 1240px;
         height: 578px;
     }
 
