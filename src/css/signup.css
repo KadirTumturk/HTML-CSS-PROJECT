@@ -1,0 +1,155 @@
+
+
+.signup-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.signup-title-img {
+    width: 155px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.section-desc {
+    max-width: 440px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #FFFFFF33;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.form-textarea {
+    min-height: 112px;
+    resize: none;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    background-color: #FFFFFF;
+    color: #121212;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #e0e0e0;
+}
+
+.signup-visual {
+    display: none;
+}
+
+.signup-content {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.privacy-note {
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+@media screen and (min-width:768px) {
+    .signup-container {
+        max-width: 768px;
+    }
+
+    .signup-visual {
+        display: none;
+    }
+
+    .signup-content {
+        margin: 0;
+        padding: 20px;
+        max-width: 480px;
+        height: auto;
+        width: 100%;
+    }
+
+    .form-input {
+        padding: 18px 15px;
+    }
+
+    .form-input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+@media screen and (min-width:1280px) {
+    body {
+        background-color: #121212;
+    }
+
+    .signup-container {
+        max-width: 1280px;
+        display: flex;
+        gap: 64px;
+        padding: 40px 20px;
+        width: 1080px;
+        height: 578px;
+    }
+
+    .signup-content {
+        width: 45%;
+        max-width: 480px;
+        margin: 0;
+    }
+
+    .signup-visual {
+        display: block;
+        width: 100%;
+        max-width: 540px;
+        height: 540px;
+        position: relative;
+        flex-shrink: 0;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .signup-container {
+        max-width: 1440px;
+        width: 1240px;
+        height: 578px;
+    }
+
+    .signup-content {
+        width: 480px;
+        height: 578px;
+    }
+
+    .form-input {
+        padding: 18px 15px;
+    }
+
+    .form-input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+    }
+}
