@@ -70,6 +70,15 @@
     margin: 0 auto;
 }
 
+.signup-section {
+    padding: 100px 0 60px;
+}
+
+.privacy-link {
+    color: rgba(255, 255, 255, 0.45);
+    text-decoration: underline;
+}
+
 .privacy-note {
     margin-bottom: 0;
     font-size: 12px;
