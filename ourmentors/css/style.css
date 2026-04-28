@@ -1,0 +1,144 @@
+ul,
+ol {
+  list-style-type: none;
+  padding: 0; /* Tarayıcının varsayılan liste girintisini sıfırlar */
+  margin: 0;
+}
+
+body {
+  background-color: #121212;
+  font-family: 'DM Sans', sans-serif; /* Doğru font tanımlaması */
+}
+
+/* Container: Sabit bir genişlik vermek yerine, kenarlardan padding verip esnek bırakmak mobilde en iyi çözümdür. */
+.container {
+  max-width: 375px; /* Mobilde referans alınan standart maksimum genişlik */
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+.our-mentors {
+  padding-top: 40px; /* Figma tasarımındaki section'ın üst boşluğuna göre burayı ayarlayabilirsin */
+  padding-bottom: 40px;
+}
+
+.our-mentors-title {
+  font-family: inherit; /* Body'den DM Sans'ı miras alır */
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.04em; /* Yüzdelik değerleri CSS'te 'em' cinsiyle yazmak en doğrusudur (-4% = -0.04em) */
+  color: #ffffff;
+  text-align: left; /* Başlığı ortalıyoruz */
+  margin: 0; /* Varsayılan boşluğu sıfırlıyoruz */
+  margin-bottom: 40px; /* Başlık ile liste arasındaki boşluk */
+}
+
+.our-mentors-title-mentors {
+  color: #bea69e;
+}
+
+/* Liste (Kapsayıcı) Ayarları */
+.our-mentors-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Her bir mentor kartı arasındaki dikey boşluk */
+}
+
+/* Kart (Item) Ayarları */
+.our-mentors-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* İçindeki resmi, h3'ü ve p'yi yatayda tam ortalar. Sabit marginlere gerek kalmaz. */
+  gap: 16px; /* Resim, isim ve tecrübe yazısı arasındaki dikey boşluklar */
+}
+
+/* Resimlerin sağa sola esnememesi için ufak bir güvenlik önlemi */
+.our-mentors-list-item-image {
+  display: block; /* Alt kısımdaki fazladan inline boşlukları siler */
+}
+
+.our-mentors-list-item-name {
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #ffffff;
+  text-align: center;
+  margin: 0; /* Kapsayıcıdaki 'gap' değerini net kullanabilmek için kendi margin'ini sıfırladık */
+}
+
+.our-mentors-list-item-description {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.02em; /* -2% = -0.02em */
+  color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* #ffffff80 yerine rgba yazımı tüm tarayıcılar için daha güvenlidir */
+  text-align: center;
+  margin: 0;
+}
+
+/* =========================================
+   TABLET (768px ve üzeri) KIRILMA NOKTASI
+   ========================================= */
+@media screen and (min-width: 768px) {
+  /* 1. Container Genişliği */
+  .container {
+    max-width: 768px; /* Konteynerin genişliğini tablet ölçüsüne çıkarıyoruz */
+    /* Sağ ve sol padding'ler (20px) mobilden miras alınacağı için tekrar yazmıyoruz */
+  }
+
+  /* 2. Mentor Listesi Düzeni (Kapsayıcı) */
+  .our-mentors-list {
+    flex-direction: row; /* Elemanları dikey yerine yatayda yan yana dizer */
+    flex-wrap: wrap; /* Yan yana sığmayan elemanların alt satıra geçmesine izin verir */
+    justify-content: center; /* 2'li blokları ortaya hizalar */
+    gap: 32px; /* Figma tasarımında tablet için kartlar arası boşluk genelde mobilden (40px) farklı olabilir. Tasarımına göre bu değeri (örneğin 32px veya 48px) Figma'dan Alt/Option tuşuyla ölçerek güncellemelisin. */
+  }
+
+  /* 3. Mentor Kartı Boyutu (İtem) */
+  .our-mentors-list-item {
+    /* İki sütunlu (2x2) bir yapı kurmak için her bir kartın genişliğini belirlemeliyiz. */
+    /* calc() fonksiyonu ile genişliğin tam yarısını (%50) alıp, aralarındaki boşluğun (gap) yarısını çıkarıyoruz ki taşıp tek sütuna düşmesinler. */
+    width: calc((100% - 32px) / 2);
+
+    /* Mobil tasarımda margin-top, margin-left gibi değerler kullanmıştın. 
+       Flexbox yapısında bu eski marginler düzeni bozar, bu yüzden onları sıfırlıyoruz. */
+    margin: 0;
+  }
+}
+/* =========================================
+   MASAÜSTÜ (PC) KIRILMA NOKTASI
+   ========================================= */
+@media screen and (min-width: 1280px) {
+  /* 1. Container Genişliği */
+  .container {
+    max-width: 1158px; /* Konteynerin genişliğini masaüstü tasarıma göre güncelliyoruz */
+    padding-left: 15px; /* Masaüstünde yan boşluklar mobilden/tabletten farklı olabilir, Figma'dan teyit etmelisin */
+    padding-right: 15px;
+  }
+
+  /* 2. Mentor Listesi (Kapsayıcı) */
+  .our-mentors-list {
+    /* flex-direction: row; ve flex-wrap: wrap; değerleri zaten tabletten miras kalacak,
+       bu yüzden onları burada tekrar yazmamıza gerek yok. Kod tekrarından kaçınmış oluyoruz. */
+
+    gap: 24px; /* Masaüstünde 4 kart yan yana geleceği için aralarındaki boşluk (gap) genellikle daralır veya değişir. Figma'dan iki resim arasını ölçüp bu değeri kesinleştirmelisin. */
+  }
+
+  /* 3. Mentor Kartı Boyutu (İtem) */
+  .our-mentors-list-item {
+    /* En kritik nokta burası: 4 kartı yan yana sığdırmak için bir matematiksel formül kuruyoruz.
+       %100 genişlikten, 4 kartın arasında oluşan 3 adet boşluğun (3 * 24px = 72px) toplamını çıkarıyoruz.
+       Kalan boş alanı 4'e bölerek her bir kartın kusursuz genişliğini buluyoruz. */
+    width: calc((100% - 72px) / 4);
+  }
+}
