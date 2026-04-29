@@ -5,18 +5,129 @@
     <link rel="icon" type="image/svg+xml" href="/HTML-CSS-PROJECT/assets/favicon-BlYzjUk8.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Focus Frame</title>
-    <link rel="stylesheet" crossorigin href="/HTML-CSS-PROJECT/assets/index-BMFIRFsh.css">
+    <script type="module" crossorigin src="/HTML-CSS-PROJECT/index.js"></script>
+    <link rel="stylesheet" crossorigin href="/HTML-CSS-PROJECT/assets/index-eZn7hBqT.css">
   </head>
   <body>
-    
+    <header class="header">
+    <div class="container header-container">
+        <div class="header-inner-frame">
+            <a href="./index.html" class="logo">Focus.Frame</a>
+
+            <div class="header-icon-wrapper">
+                <svg class="header-camera-icon" width="16" height="16">
+                    <use href="/HTML-CSS-PROJECT/assets/icons-BvHCp8XC.svg#icon-camera"></use>
+                </svg>
+            </div>
+
+            <button type="button" class="mobile-menu-btn">
+                <svg class="mobile-menu-icon" width="32" height="22">
+                    <use href="/HTML-CSS-PROJECT/assets/icons-BvHCp8XC.svg#icon-menu"></use>
+                </svg>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#courses" class="nav-link">OUR COURSES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#mentors" class="nav-link">OUR MENTORS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#reviews" class="nav-link">REVIEWS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contacts" class="nav-link">CONTACTS</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <a href="#signup" class="signup-btn">SIGN UP</a>
+    </div>
+</header>
 
     <main>
       <!-- Loads the specified .html file -->
       
+      <section class="about-us">
+        <h2 class="section-title">About <span class="italic">Us</span></h2>
+        
+        <div class="about-content">
+            
+            <!-- Kamera Görseli -->
+            <div class="image-wrapper">
+                <img src="/HTML-CSS-PROJECT/assets/rectangle-B_4TSkD1.png" alt="Fotoğraf makinesi" loading="lazy">
+            </div>
+            
+            <!-- Birinci Paragraf -->
+            <div class="text-column">
+                <p>
+                    Our photography school is designed to teach you everything
+                    you need to know about this magical art. Regardless of your
+                    experience or skill level, we offer a wide range of courses
+                    to suit your needs and interests. Our teaching team consists
+                    of experienced photographers who have many years of experience
+                    in this field. They strive not only to share their knowledge,
+                    but also to inspire you to develop and express your unique creativity.
+                </p>
+            </div>
+            
+            <!-- İkinci Paragraf -->
+            <div class="text-column">
+                <p>
+                    Our courses cover a wide range of topics, from the basics of
+                    photography and equipment use to professional image processing
+                    and creating impressive compositions. You will have the opportunity
+                    to learn the technical aspects of photography, discover your own
+                    style and develop your own visual language.
+                </p>
+            </div>
+            
+        </div>
+    </section>
       
-      
-      
-      
+      <section class="our-mentors">
+    <div class="container">
+        <h2 class="our-mentors-title">
+            Our <span class="our-mentors-title-mentors">Mentors</span>
+        </h2>
+        <ul class="our-mentors-list">
+            <li class="our-mentors-list-item">
+                <img srcset="/HTML-CSS-PROJECT/assets/emilia_smith-C-udWjSD.png 1x, /HTML-CSS-PROJECT/assets/emilia_smith@2x-Dyzh2heK.png 2x" alt="Mentor 1" class="our-mentors-list-item-image" width="180px" height="180px" />
+                <h3 class="our-mentors-list-item-name">Emilia Smith</h3>
+                <p class="our-mentors-list-item-description">
+                    1.5 years of experience
+                </p>
+            </li>
+            <li class="our-mentors-list-item">
+                <img srcset="/HTML-CSS-PROJECT/assets/alex_lebedev-Cd6e-1MC.png 1x, /HTML-CSS-PROJECT/assets/alex_lebedev@2x-BCaMntOf.png 2x" alt="Mentor 2" class="our-mentors-list-item-image" width="180px" height="180px" />
+                <h3 class="our-mentors-list-item-name">Alex Lebedev</h3>
+                <p class="our-mentors-list-item-description">
+                    3.5 years of experience
+                </p>
+            </li>
+            <li class="our-mentors-list-item">
+                <img srcset="/HTML-CSS-PROJECT/assets/mia_dubrovska-H8OYhnWs.png 1x, /HTML-CSS-PROJECT/assets/mia_dubrovska@2x-BxSC7_mC.png 2x" alt="Mentor 3" class="our-mentors-list-item-image" width="180px" height="180px" />
+                <h3 class="our-mentors-list-item-name">Mia Dubrovska</h3>
+                <p class="our-mentors-list-item-description">
+                    2.0 years of experience
+                </p>
+            </li>
+            <li class="our-mentors-list-item">
+                <img srcset="/HTML-CSS-PROJECT/assets/eliot_kovalev-CfIrXjL2.png 1x, /HTML-CSS-PROJECT/assets/eliot_kovalev@2x-CDNQNCyx.png 2x" alt="Mentor 4" class="our-mentors-list-item-image" width="180" height="180" />
+                <h3 class="our-mentors-list-item-name">Eliot Kovalev</h3>
+                <p class="our-mentors-list-item-description">
+                    4.0 years of experience
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
       <div class="signup-section" id="signup">
     <div class="signup-container">
 
@@ -45,9 +156,225 @@
         </div>
     </div>
 </div>
+      <section class="reviews">
+      <div class="reviews-container">
+        <h2 class="reviews-title">Reviews</h2>
+        <ul class="reviews-list">
+          <!-- CARD 1 -->
+          <li class="review-card">
+            <div class="review-header">
+              <div class="review-user">
+                <img
+                  src="/HTML-CSS-PROJECT/assets/user-CknfD0rR.png"
+                  alt="Abraham Baker"
+                  class="reviews-avatar"
+                />
+                <div class="review-meta">
+                  <h3 class="review-name">Abraham Baker</h3>
+                  <p class="review-role">Student</p>
+                  <div class="review-stars">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                      />
+                    </svg>
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                      />
+                    </svg>
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                      />
+                    </svg>
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                      />
+                    </svg>
+                    <svg class="empty" viewBox="0 0 24 24">
+                      <path
+                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p class="review-text">
+              I am very pleased that I decided to enroll in photography school.
+              The teachers turned out to be very talented and experienced
+              professionals who share their knowledge and are dedicated to their
+              work. I was able to expand my skills and discover my own style.
+            </p>
+          </li>
+          <!-- CARD 2-->
+          <li class="review-card second-card">
+            <div class="review-header">
+              <div class="review-user">
+                <img
+                  src="/HTML-CSS-PROJECT/assets/user2-C7lNZVRK.png"
+                  alt="Amanda Lowery"
+                  class="reviews-avatar"
+                />
+                <div class="review-meta">
+                  <h3 class="review-name">Amanda Lowery</h3>
+                  <p class="review-role">Student</p>
+                  <div class="review-stars">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                      />
+                    </svg>
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                      />
+                    </svg>
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                      />
+                    </svg>
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                      />
+                    </svg>
+                    <svg class="empty" viewBox="0 0 24 24">
+                      <path
+                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p class="review-text">
+              The courses at the photography school exceeded all my
+              expectations. I gained not only technical knowledge, but also
+              inspiration and motivation to reach new heights in my creativity.
+              Hands-on classes and workshops helped me understand different
+              styles of photography.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+      <section class="modal-section">
+    <div class="modal-menu">
+        <button type="button" class="close-button">
+            <div class="modal-svg">
+                <svg width="32" height="32">
+                    <use href="data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M30%2010L10%2030'%20stroke='%23121212'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M10%2010L30%2030'%20stroke='%23121212'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"></use>
+                </svg>
+            </div>
+        </button>
+        <nav class="modal-menu-nav">
+            <ul class="modal-menu-nav-list">
+                <li><a class="link" href="/">ABOUT US</a></li>
+                <li><a class="link" href="/">OUR COURSES</a></li>
+                <li><a class="link" href="/">OUR MENTORS</a></li>
+                <li><a class="link" href="/">REVIEWS</a></li>
+                <li><a class="link" href="/">CONTACTS</a></li>
+            </ul>
+        </nav>
+        <img class="mobile-menu-img" src="/HTML-CSS-PROJECT/assets/mobile-menu-MiGLIkoH.png" width="329" height="218" alt="fotoğraf makinesi" />
+        <img class="tablet-menu-img" src="/HTML-CSS-PROJECT/assets/tablet-menu-B5ffdNJt.png" width="480px;" height="476px;"
+            alt="fotoğraf makinesi" />
+    </div>
+</section>
     </main>
 
-    
-
+    <footer class="footer">
+<div class="container-footer">
+    <div class="footer-outer">
+        <div class="footer-top">
+            <a href="./footer.html" class="footer-logo">
+            <svg class="icon icon-logo-2">
+                <use xlink:href="../public/symbol-defs(1).svg#icon-logo-2"></use>
+            </svg>
+            </a>
+            <address class="footer-contacts">
+                <a class="address-link" href="tel:+380665438912">
+                +38 066 543 8912                  
+                </a>
+                <p class="address-text">
+                1678 S. Pioneer Road Salt Lake City UT 84104
+                </p>
+                </address>
+         </div>
+     <div class="footer-block">
+       <ul class="footer-social">
+        <li class="footer-social-item">
+            <a class="social-link" href="https://www.instagram.com/goit.turkiye/" target="_blank">
+                INSTAGRAM
+            </a>
+        </li>
+        <li class="footer-social-item">
+            <a class="social-link" href="https://www.facebook.com/people/GOIT-T%C3%BCrkiye/61558036560161/"  target="_blank">
+                FACEBOOK
+            </a>
+        </li>
+        <li class="footer-social-item">
+            <a class="social-link" href="https://m.youtube.com/@GoITTurkey"  target="_blank">
+                YOUTUBE
+            </a>
+        </li>
+       </ul>
+       <ul class="footer-menu">
+        <li class="footer-menu-item">
+            <a class="menu-link" href="#">
+                ABOUT US
+            </a>
+        </li>
+        <li class="footer-menu-item">
+            <a class="menu-link" href="#">
+                OUR COURSES
+            </a>
+        </li>
+        <li class="footer-menu-item">
+            <a class="menu-link" href="#">
+                OUR MENTORS
+            </a>
+        </li>
+        <li class="footer-menu-item">
+            <a class="menu-link" href="#">
+                REVIEWS
+            </a>
+        </li>
+        <li class="footer-menu-item">
+            <a class="menu-link" href="#">
+                CONTACTS
+            </a>
+        </li>
+        </ul>
+         </div>
+      <form class="footer-form" name="email" autocomplete="on">
+         <div class="footer-label">
+            <label>
+                <input class="footer-input" type="email" name="email" placeholder="Enter your email" required />
+            </label>
+              <button class="footer-btn" type="submit">Go</button>
+         </div>
+         </form>
+        </div>
+        <div class="footer-privacy">
+            <a class="privacy-link" href="#" target="_blank">
+                <p>Privacy Policy </p>
+                <p>Public Offering Agreement</p>
+            </a>
+            <p class="footer-copyright">
+            2024 Focus Frame 
+            &copy;All rights reserved
+            </p>
+            
+        </div>
+</div>
+</footer>
+
   </body>
 </html>
