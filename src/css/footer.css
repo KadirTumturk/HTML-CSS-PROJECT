@@ -19,6 +19,20 @@
     margin-bottom: 16px;
 }
 
+.footer-logo {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.footer-copyright {
+    width: 116px;
+    height: 32px;
+}
+
 .icon-logo-2 {
     width: 127px;
     height: 20px;
@@ -26,8 +40,11 @@
 }
 
 .footer-contacts {
-    display: flex;
+display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
     gap: 10px;
 }
 
@@ -111,15 +128,33 @@
     background-color: #2d2d2d;
 }
 
+.footer-privacy p {
+    color: #ffffff;
+    text-decoration: none;
+}
+
 .footer-privacy {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 335px;
+}
+
+.privacy-link {
+    width: 147px;
+    height: 32px;
+}
+
+.footer-copyright {
+    width: 116px;
+    height: 32px;
+
 }
 
 .privacy-link,
 .footer-copyright {
     color: #ffffff;
+    font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
@@ -130,6 +165,12 @@
     .footer {
         padding: 50px 32px 25px;
         background-image: url(../img/grid780.png);
+    }
+
+    .footer-contacts {
+    width: 152px;
+    height: 64px;
+    margin-right:48px;
     }
 
     .footer-logo {
@@ -160,11 +201,21 @@
         width: 178px;
     }
 
-    .privacy-link,
-    .footer-copyright {
-        font-size: 14px;
-        line-height: 18px;
-    }
+        .footer-privacy {
+            max-width: 1280px;
+        }
+    
+        .privacy-link {
+            width: 172px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    
+        .footer-copyright {
+            width: 134px;
+            font-size: 14px;
+            line-height: 18px;
+        }
 }
 
 /* DESKTOP 1280px */
@@ -187,10 +238,11 @@
         gap: 20px;
     }
 
-    .footer-contacts {
-        width: 287px;
-    }
-
+        .footer-contacts {
+            width: 287px;
+            height: 46px;
+            margin-right: 140px;
+        }
     .footer-input {
         width: 216px;
     }
@@ -203,7 +255,15 @@
         padding: 50px 120px 25px;
     }
 
+    .footer-contacts {
+        white-space: nowrap;
+    }
+
     .footer-block {
         column-gap: 100px;
     }
+
+        .footer-privacy {
+            max-width: 1440px;
+        }
 }

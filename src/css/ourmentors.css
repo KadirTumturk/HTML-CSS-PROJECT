@@ -8,7 +8,6 @@ ol {
 
 body {
     background-color: #121212;
-    font-family: 'DM Sans', sans-serif;
     /* Doğru font tanımlaması */
 }
 
@@ -28,7 +27,6 @@ body {
 }
 
 .our-mentors-title {
-    font-family: inherit;
     /* Body'den DM Sans'ı miras alır */
     font-size: 28px;
     font-weight: 500;
@@ -73,7 +71,6 @@ body {
 }
 
 .our-mentors-list-item-name {
-    font-family: inherit;
     font-size: 20px;
     font-weight: 500;
     line-height: 24px;
@@ -85,7 +82,6 @@ body {
 }
 
 .our-mentors-list-item-description {
-    font-family: inherit;
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;

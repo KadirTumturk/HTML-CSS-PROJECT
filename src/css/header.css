@@ -1,13 +1,10 @@
 :root {
-    --primary-font: "Roboto", sans-serif;
-    --logo-font: "Raleway", sans-serif;
     --white: #ffffff;
     --bg-color: #121212;
     --accent-color: #bea69e;
 }
 
 body {
-    font-family: var(--primary-font);
     background-color: var(--bg-color);
     color: var(--white);
     margin: 0;
@@ -37,6 +34,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-image: url('../img/grid780.png');
 }
 
 .header-camera-icon {
@@ -80,10 +78,11 @@ a {
     padding: 0 16px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 12px;
+    background-color: #121212;
 }
 
 .logo {
-    font-family: var(--logo-font);
+
     font-weight: 700;
     font-size: 18px;
     color: #ffffff;
@@ -154,7 +153,6 @@ a {
         color: #121212;
         border: 2px solid transparent;
         border-radius: 12px;
-        font-family: "DM Sans", sans-serif;
         font-weight: 700;
         font-size: 18px;
         font-weight: 700;
@@ -257,7 +255,6 @@ a {
     }
 
     .nav-link {
-        font-family: "DM Sans", sans-serif;
         font-size: 14px;
         text-transform: uppercase;
         color: white;
@@ -282,7 +279,6 @@ a {
         background-color: #ffffff;
         color: #121212;
         border-radius: 12px;
-        font-family: "DM Sans", sans-serif;
         font-weight: 700;
         font-size: 18px;
         text-transform: uppercase;

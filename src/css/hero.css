@@ -8,12 +8,12 @@
 
 .hero-container {
     padding: 0 15px;
+    background-image: url('../img/grid780.png');
 }
 
 .hero-frame {
     position: relative;
     background-color: #1f1f1f;
-    background-image: url('../img/grid780.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,9 +31,10 @@
     gap: 16px;
 }
 
+
+
 .hero-title {
-    font-family: var(--logo-font, "Raleway"), serif;
-    font-size: 28px;
+    font-size: 12px;
     line-height: 1.2;
     font-weight: 600;
     color: var(--white, #ffffff);
@@ -46,7 +47,6 @@
 }
 
 .hero-description {
-    font-family: var(--primary-font, "Inter"), sans-serif;
     font-size: 12px;
     line-height: 1.5;
     color: rgba(255, 255, 255, 0.7);
@@ -145,17 +145,32 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     overflow: hidden;
-    white-space: nowrap;
+}
+
+/* Kayan yazı için track */
+.advertisement-track {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    width: max-content;
+    animation: marquee 30s linear infinite;
+}
+
+/* Hover'da yavaşlasın */
+.advertisement:hover .advertisement-track {
+    animation-play-state: paused;
 }
 
 .advertisement-text {
-    font-family: var(--logo-font, "Raleway"), serif;
-    font-size: 18px;
+    font-size: 24px;
     letter-spacing: 0.05em;
     color: var(--white, #ffffff);
-    text-align: center;
     margin: 0;
     text-transform: uppercase;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 32px;
 }
 
 .advertisement-text .italic-accent {
@@ -164,14 +179,33 @@
     font-weight: 700;
 }
 
-.advertisement-text span {
-    display: inline-block;
-    margin: 0 8px;
+.advertisement-star {
+    color: var(--accent-color, #bea69e);
+    font-size: 1.2em;
+}
+
+/* Marquee animation — soldan sağa */
+@keyframes marquee {
+    0% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Erişilebilirlik */
+@media (prefers-reduced-motion: reduce) {
+    .advertisement-track {
+        animation: none;
+    }
 }
 
 @media (min-width: 768px) {
     .hero-container {
         padding: 0 32px;
+        background-image: url('../img/grid780.png');
     }
 
     .hero-frame {
@@ -179,7 +213,6 @@
         align-items: center;
         justify-content: space-between;
         padding: 40px 40px 0;
-        background-image: url('../img/grid1280.png');
         gap: 32px;
     }
 
@@ -217,11 +250,11 @@
         padding: 0 60px;
         max-width: 1440px;
         margin: 0 auto;
+        background-image: url('../img/grid780.png');
     }
 
     .hero-frame {
         padding: 60px 60px 0;
-        background-image: url('../img/grid.1440.png');
     }
 
     .hero-title {
@@ -243,7 +276,7 @@
 }
 
 @media screen and (min-width: 1440px) {
-    .container .hero-container {
+    .container .hero {
         max-width: 1240px;
         padding: 40px 120px;
     }

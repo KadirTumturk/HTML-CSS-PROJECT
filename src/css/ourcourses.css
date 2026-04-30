@@ -18,7 +18,6 @@
 }
 
 .our-courses-title {
-    font-family: var(--logo-font, "Raleway"), serif;
     font-size: 32px;
     font-weight: 600;
     line-height: 1.2;
@@ -32,7 +31,6 @@
 }
 
 .our-courses-description {
-    font-family: var(--primary-font, "Inter"), sans-serif;
     font-size: 13px;
     line-height: 1.5;
     color: rgba(255, 255, 255, 0.7);
@@ -51,14 +49,26 @@
 }
 
 .course-card {
-    background-color: #1f1f1f;
-    border-radius: 12px;
-    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    position: relative;
+    flex: 1;
+    height: 420px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    min-height: 200px;
-    transition: background-color 250ms ease;
+
+    padding: 32px;
+    border-radius: 16px;
+
+    background: linear-gradient(rgba(6, 7, 7, 1), rgba(29, 29, 29, 1));
+
+    backdrop-filter: blur(10px);
+}
+
+.course-card p {
+    color: #9C9C9C;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: auto;
 }
 
 .course-card:hover {
@@ -72,7 +82,6 @@
 }
 
 .course-number {
-    font-family: var(--logo-font, "Raleway"), serif;
     font-size: 14px;
     color: var(--accent-color, #bea69e);
     font-weight: 600;
@@ -102,7 +111,6 @@
 }
 
 .course-title {
-    font-family: var(--logo-font, "Raleway"), serif;
     font-size: 18px;
     font-weight: 600;
     line-height: 1.3;
@@ -111,7 +119,6 @@
 }
 
 .course-description {
-    font-family: var(--primary-font, "Inter"), sans-serif;
     font-size: 12px;
     line-height: 1.5;
     color: rgba(255, 255, 255, 0.6);
