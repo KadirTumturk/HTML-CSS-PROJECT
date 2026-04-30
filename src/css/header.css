@@ -1,3 +1,28 @@
+:root {
+    --primary-font: "Roboto", sans-serif;
+    --logo-font: "Raleway", sans-serif;
+    --white: #ffffff;
+    --bg-color: #121212;
+    --accent-color: #bea69e;
+}
+
+body {
+    font-family: var(--primary-font);
+    background-color: var(--bg-color);
+    color: var(--white);
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
 .container {
     max-width: 375px;
     padding: 0 15px;
@@ -25,84 +50,94 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin-left: auto;
+    margin-right: 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 250ms ease;
+    z-index: 10;
 }
 
-.mobile-menu-btn {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
+.header-icon-wrapper:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.header-icon-wrapper:hover .header-camera-icon {
+    fill: rgba(190, 166, 158, 1);
+}
+
+.header-inner-frame {
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-.mobile-menu-icon {
-    width: 32px;
-    height: 22px;
-    fill: var(--white, #ffffff);
-    transition: fill 250ms ease;
-}
-
-.mobile-menu-btn:hover .mobile-menu-icon {
-    fill: var(--accent-color, #bea69e);
+    justify-content: space-between;
+    position: relative;
+    width: 335px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
 }
 
 .logo {
-    font-family: var(--logo-font, "Raleway"), serif;
-    font-size: 16px;
+    font-family: var(--logo-font);
     font-weight: 700;
-    color: var(--white, #ffffff);
-    text-decoration: none;
-    letter-spacing: 0.02em;
+    font-size: 18px;
+    color: #ffffff;
 }
 
-.logo:hover {
-    color: var(--accent-color, #bea69e);
-}
-
-/* Mobilde nav menüsünü gizle, mobil menü ile aç */
-.nav {
-    display: none;
-}
-
+.nav,
 .signup-btn {
     display: none;
 }
 
-/* Smooth scroll davranışı (nav linkleri için) */
-html {
-    scroll-behavior: smooth;
+.mobile-menu-btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    line-height: 0;
 }
 
-/* ============================================
-   TABLET — 768px+
-   ============================================ */
-@media (min-width: 768px) {
+.mobile-menu-icon {
+    stroke: white;
+}
+
+@media screen and (min-width: 768px) {
     .container {
         max-width: 768px;
-        padding: 0 32px;
     }
 
-    .header {
-        padding-top: 24px;
+    .header-container {
+        padding: 20px 32px;
+        gap: 24px;
     }
 
     .header-inner-frame {
         display: flex;
         align-items: center;
-        gap: 32px;
-        flex: 1;
+        justify-content: space-between;
+        flex-grow: 1;
+        padding: 0;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+        position: relative;
+        width: 504px;
+        height: 60px;
+        margin: 0 auto;
+        padding: 0 14px;
     }
 
-    /* Tablet'te kamera ikonunu gizle, hamburger ve sign up göster */
     .header-icon-wrapper {
         display: none;
     }
 
     .mobile-menu-btn {
-        display: flex;
-        order: 3;
+        display: block;
+        margin-right: 20px;
     }
 
     .nav {
@@ -110,92 +145,161 @@ html {
     }
 
     .signup-btn {
-        display: inline-flex;
+        display: flex;
         align-items: center;
         justify-content: center;
-        padding: 10px 24px;
-        background-color: var(--white, #ffffff);
+        width: 160px;
+        height: 48px;
+        background: white;
         color: #121212;
-        font-family: var(--primary-font, "Inter"), sans-serif;
-        font-size: 12px;
-        font-weight: 600;
-        letter-spacing: 0.05em;
-        border-radius: 24px;
+        border: 2px solid transparent;
+        border-radius: 12px;
+        font-family: "DM Sans", sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
         text-decoration: none;
-        transition: background-color 250ms ease, color 250ms ease;
-        order: 2;
+        white-space: nowrap;
+        transition:
+            background-color 250ms ease,
+            color 250ms ease,
+            border-color 250ms ease;
     }
 
-    .signup-btn:hover {
-        background-color: var(--accent-color, #bea69e);
-        color: #121212;
+    .signup-btn:hover,
+    .signup-btn:focus {
+        background-color: #1d1d1d;
+        color: var(--accent-color);
     }
 }
 
-/* ============================================
-   DESKTOP — 1280px+
-   ============================================ */
 @media (min-width: 1280px) {
     .container {
+    max-width: 1080px;
+    }
+    .mobile-menu-btn {
+        display: none;
+    }
+    .nav-list {
+        display: flex;
+        gap: 40px;
+        flex-direction: row;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        }
+    .header-inner-frame {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 982px;
+        height: 60px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+        padding: 0 24px;
+        margin: 0;
+        }
+        .nav {
+            display: flex;
+        }
+}
+
+
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1240px;
+    }
+
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 19px;
         max-width: 1280px;
-        padding: 0 60px;
+        margin: 0 auto;
+        padding: 20px 15px;
     }
 
-    .header {
-        padding-top: 32px;
-    }
-
-    /* Desktop'ta hamburger gizle, tam nav göster */
     .mobile-menu-btn {
         display: none;
     }
 
     .nav {
-        display: block;
-        flex: 1;
+        display: flex;
+    }
+
+    .header-inner-frame {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 982px;
+        height: 60px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+        padding: 0 24px;
+        margin: 0;
+    }
+
+    .header-icon-wrapper {
+        display: none;
     }
 
     .nav-list {
         display: flex;
+        gap: 40px;
+        flex-direction: row;
         align-items: center;
-        justify-content: center;
-        gap: 32px;
         list-style: none;
-        margin: 0;
         padding: 0;
+        margin: 0;
     }
 
     .nav-link {
-        font-family: var(--primary-font, "Inter"), sans-serif;
-        font-size: 12px;
-        font-weight: 500;
-        letter-spacing: 0.08em;
-        color: var(--white, #ffffff);
-        text-decoration: none;
-        transition: color 250ms ease;
+        font-family: "DM Sans", sans-serif;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: white;
+        min-width: 97px;
+        display: inline-block;
+        text-align: center;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .nav-link:hover,
     .nav-link:focus {
-        color: var(--accent-color, #bea69e);
-    }
-
-    .logo {
-        font-size: 20px;
+        color: var(--accent-color);
     }
 
     .signup-btn {
-        font-size: 13px;
-        padding: 12px 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 84px;
+        width: 239px;
+        height: 60px;
+        background-color: #ffffff;
+        color: #121212;
+        border-radius: 12px;
+        font-family: "DM Sans", sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-size: 18px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-decoration: none;
+        border: 2px solid transparent;
+        transition:
+            background-color 250ms ease,
+            color 250ms ease,
+            border-color 250ms ease;
     }
-}
 
-/* ============================================
-   1440px+
-   ============================================ */
-@media (min-width: 1440px) {
-    .container {
-        max-width: 1440px;
-        padding: 0 80px;
+    .signup-btn:hover,
+    .signup-btn:focus {
+        background-color: #1d1d1d;
+        color: var(--accent-color);
     }
 }

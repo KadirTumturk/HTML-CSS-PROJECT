@@ -241,3 +241,15 @@
         font-size: 36px;
     }
 }
+
+@media screen and (min-width: 1440px) {
+    .container .hero-container {
+        max-width: 1240px;
+        padding: 40px 120px;
+    }
+
+    .signup-content {
+        width: 480px;
+        height: auto;
+    }
+}

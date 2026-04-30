@@ -96,7 +96,7 @@
 
 /*tablet*/
 @media (min-width: 768px) {
-    .container {
+    .modal-menu-container {
         width: 768px;
         padding: 0;
     }
